@@ -1,8 +1,8 @@
 {
   "name": "vite-monorepo-sandbox",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Vite pnpm monorepo sample which can be deployed as GitHub Pages.",
   "scripts": {
     "dev": "pnpm --parallel --stream -r run dev",
     "dev:index": "pnpm --filter ./apps/index run dev",
@@ -10,7 +10,13 @@
     "build": "pnpm --filter ./apps/index run build && pnpm --filter !./apps/index --parallel --stream -r run build",
     "preview:index": "pnpm --filter ./apps/index run preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["vite", "pnpm", "monorepo", "github-pages"],
+  "author": "Ko Nagase",
+  "license": "Unlicense",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  }
 }
